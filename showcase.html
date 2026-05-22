@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Python Web Scraper</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:#0d1117; color:#e6edf3; padding:40px; }
+  .card { max-width:1000px; margin:0 auto; }
+  .header { display:flex; align-items:center; gap:14px; margin-bottom:6px; }
+  .badge { background:#238636; color:#fff; font-size:12px; font-weight:600; padding:4px 10px; border-radius:20px; letter-spacing:.3px; }
+  h1 { font-size:28px; font-weight:700; }
+  .sub { color:#8b949e; font-size:15px; margin-bottom:24px; }
+  .flow { display:flex; gap:10px; align-items:center; margin-bottom:24px; flex-wrap:wrap; }
+  .step { background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px 16px; font-size:14px; font-weight:600; }
+  .arrow { color:#238636; font-size:20px; font-weight:700; }
+  .panel-title { font-size:13px; text-transform:uppercase; letter-spacing:1px; color:#8b949e; margin:20px 0 8px; }
+  .terminal { background:#010409; border:1px solid #30363d; border-radius:10px; overflow:hidden; }
+  .tbar { background:#161b22; padding:8px 14px; display:flex; gap:8px; align-items:center; border-bottom:1px solid #30363d; }
+  .dot { width:12px; height:12px; border-radius:50%; }
+  .r{background:#ff5f56;} .y{background:#ffbd2e;} .g{background:#27c93f;}
+  .tpath { color:#8b949e; font-size:12px; margin-left:8px; }
+  .term-body { padding:16px 18px; font-family:'Cascadia Code','Consolas',monospace; font-size:13.5px; line-height:1.7; white-space:pre; overflow-x:auto; }
+  .cmd { color:#7ee787; }
+  .ok { color:#3fb950; }
+  table { width:100%; border-collapse:collapse; margin-top:8px; background:#0d1117; border:1px solid #30363d; border-radius:10px; overflow:hidden; font-size:14px; }
+  th { background:#161b22; text-align:left; padding:10px 14px; color:#58a6ff; font-weight:600; border-bottom:1px solid #30363d; }
+  td { padding:9px 14px; border-bottom:1px solid #21262d; }
+  tr:last-child td { border-bottom:none; }
+  tr:hover td { background:#161b22; }
+  td a { color:#58a6ff; text-decoration:none; }
+  .footer { margin-top:24px; color:#8b949e; font-size:13px; display:flex; justify-content:space-between; }
+  .tech span { background:#161b22; border:1px solid #30363d; border-radius:6px; padding:3px 9px; margin-right:6px; font-size:12px; color:#c9d1d9; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="header"><h1>Advanced Python Web Scraper</h1><span class="badge">PYTHON</span></div>
+  <div class="sub">Fetches a web page, parses the HTML with BeautifulSoup, extracts structured records (title + link), and exports them to CSV.</div>
+
+  <div class="flow">
+    <div class="step">Fetch page (requests)</div><span class="arrow">&rarr;</span>
+    <div class="step">Parse HTML (BeautifulSoup)</div><span class="arrow">&rarr;</span>
+    <div class="step">Extract records</div><span class="arrow">&rarr;</span>
+    <div class="step">Export CSV (pandas)</div>
+  </div>
+
+  <div class="panel-title">Live Run</div>
+  <div class="terminal">
+    <div class="tbar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="tpath">advanced-python-web-scraper</span></div>
+    <div class="term-body"><span class="cmd">$ python main.py</span>
+Fetching page: https://news.ycombinator.com
+Extracted 58 articles
+<span class="ok">Saved 58 rows to data/output.csv</span>
+<span class="ok">Scraping completed</span></div>
+  </div>
+
+  <div class="panel-title">Output &mdash; data/output.csv (sample of 58 rows)</div>
+  <table>
+    <tr><th>title</th><th>link</th></tr>
+    <tr><td>The IBM-ification of Google?</td><td><a>zeroshot.bearblog.dev/google-is-shattering...</a></td></tr>
+    <tr><td>Project Hail Mary &ndash; Stellar Navigation Chart</td><td><a>valhovey.github.io/gaia-mary/</a></td></tr>
+    <tr><td>The memory shortage is causing a repricing of consumer electronics</td><td><a>davidoks.blog/p/ai-is-killing-the-cheap-smartphone</a></td></tr>
+    <tr><td>Using Kagi Search with Low Vision</td><td><a>veroniiiica.com/using-kagi-search-with-low-vision/</a></td></tr>
+  </table>
+
+  <div class="footer">
+    <div class="tech"><span>Python</span><span>Requests</span><span>BeautifulSoup</span><span>Pandas</span></div>
+    <div>github.com/AhmYousry/advanced-python-web-scraper</div>
+  </div>
+</div>
+</body>
+</html>
